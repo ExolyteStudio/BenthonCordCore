@@ -1,0 +1,149 @@
+# Quick Update Guide
+
+## How to Update Version Numbers
+
+### 1. Update Latest Version (latest.html)
+Find and change:
+```html
+<div class="version-number-display">3.2.1</div>
+<p class="version-release-date">Released: December 20, 2024</p>
+```
+
+Also update the changelog in the same file.
+
+### 2. Update Download Page (download.html)
+Update the featured download card:
+```html
+<p class="version">Version 3.2.1</p>
+<p class="release-date">Released: December 20, 2024</p>
+```
+
+Add new version to the "Previous Versions" section:
+```html
+<div class="version-item">
+    <div class="version-info">
+        <h4>Version X.X.X</h4>
+        <p class="version-date">Month DD, YYYY</p>
+        <p class="version-notes">Description of changes</p>
+    </div>
+    <div class="version-downloads">
+        <a href="#" class="download-link" data-version="X.X.X" data-platform="Windows x64">Windows x64</a>
+        <a href="#" class="download-link" data-version="X.X.X" data-platform="Windows x86">Windows x86</a>
+        <a href="#" class="download-link" data-version="X.X.X" data-platform="Linux">Linux</a>
+        <a href="#" class="download-link" data-version="X.X.X" data-platform="macOS">macOS</a>
+    </div>
+</div>
+```
+
+## How to Add Real Download Links
+
+### Option 1: Direct File Downloads
+In `js/script.js`, replace the download handler:
+```javascript
+document.querySelectorAll('.download-btn, .download-link').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const version = this.getAttribute('data-version');
+        const platform = this.getAttribute('data-platform');
+        
+        // Construct download URL
+        let downloadUrl = '';
+        
+        if (platform === 'Windows x64') {
+            downloadUrl = `/downloads/BenthonCord-${version}-win-x64.exe`;
+        } else if (platform === 'Windows x86') {
+            downloadUrl = `/downloads/BenthonCord-${version}-win-x86.exe`;
+        } else if (platform === 'Linux') {
+            downloadUrl = `/downloads/BenthonCord-${version}-linux.AppImage`;
+        } else if (platform === 'macOS') {
+            downloadUrl = `/downloads/BenthonCord-${version}-mac.dmg`;
+        }
+        
+        // Trigger download
+        window.location.href = downloadUrl;
+        showNotification(`Downloading ${platform} version ${version}...`);
+    });
+});
+```
+
+### Option 2: GitHub Releases
+```javascript
+const GITHUB_REPO = 'yourusername/benthoncord';
+
+document.querySelectorAll('.download-btn, .download-link').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const version = this.getAttribute('data-version');
+        const platform = this.getAttribute('data-platform');
+        
+        // GitHub release URL
+        const releaseUrl = `https://github.com/${GITHUB_REPO}/releases/download/v${version}/BenthonCord-${version}-${platform}.exe`;
+        
+        window.location.href = releaseUrl;
+        showNotification(`Downloading ${platform} version ${version}...`);
+    });
+});
+```
+
+## How to Update FAQ
+
+Edit `faq.html` and add new FAQ items:
+```html
+<div class="faq-item">
+    <div class="faq-question">
+        <h3>Your Question Here?</h3>
+        <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+        <p>Your answer here...</p>
+    </div>
+</div>
+```
+
+## How to Change Contact/Support Links
+
+Replace "https://projects.exolyte.pl" throughout all HTML files with your actual support URL.
+
+Use search and replace in your text editor:
+- Find: `https://projects.exolyte.pl`
+- Replace with: `your-support-url-here`
+
+## Color Customization
+
+Edit `css/style.css` to change the color scheme:
+```css
+:root {
+    --bg-primary: #000000;      /* Main background */
+    --bg-secondary: #0a0a0a;    /* Secondary background */
+    --bg-card: #111111;         /* Card backgrounds */
+    --text-primary: #ffffff;    /* Main text */
+    --text-secondary: #b0b0b0;  /* Secondary text */
+    --border-color: #252525;    /* Borders */
+}
+```
+
+## Testing Checklist
+
+Before deploying updates:
+- [ ] All version numbers are consistent across pages
+- [ ] Download links are working
+- [ ] Images are displaying correctly
+- [ ] All navigation links work
+- [ ] FAQ accordion functions properly
+- [ ] Responsive design works on mobile
+- [ ] Browser compatibility (Chrome, Firefox, Safari, Edge)
+- [ ] No console errors in browser developer tools
+
+## Deployment
+
+After making changes:
+1. Test locally by opening `index.html` in a browser
+2. Upload all changed files to your web server
+3. Clear browser cache and test live site
+4. Check all pages for any issues
+
+---
+
+For more detailed instructions, see README.md

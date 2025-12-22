@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get Discord Application ID - BenthonCord</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="BenthonCord Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="https://projects.exolyte.pl" target="_blank">Our Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="guide-section">
+        <div class="container">
+            <h1 class="page-title">How to Get Your Discord Application ID</h1>
+            <p class="page-subtitle">Follow this step-by-step guide to obtain your Application ID for BenthonCord</p>
+
+            <div class="guide-content">
+                <div class="guide-intro">
+                    <p>To use custom Rich Presence with BenthonCord, you'll need a Discord Application ID. This guide will walk you through the process of creating a Discord application and obtaining your unique Application ID.</p>
+                    <p><strong><i class="far fa-clock"></i> Estimated time:</strong> 3-5 minutes</p>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">Step 1</div>
+                    <h3>Go to Discord Developer Portal</h3>
+                    <p>Open your web browser and navigate to the Discord Developer Portal at <strong>https://discord.com/developers/applications</strong></p>
+                    <p>If you're not already logged in, sign in with your Discord account credentials.</p>
+                    <div class="step-image-placeholder">
+                        <img src="images/step1.png" alt="Discord Developer Portal Homepage">
+                        <p class="image-caption">Discord Developer Portal homepage</p>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">Step 2</div>
+                    <h3>Create a New Application</h3>
+                    <p>Click on the blue <strong>"New Application"</strong> button located in the top right corner of the page.</p>
+                    <p>This will open a dialog box where you can set up your new application.</p>
+                    <div class="step-image-placeholder">
+                        <img src="images/step2.png" alt="New Application Button">
+                        <p class="image-caption">Click the "New Application" button</p>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">Step 3</div>
+                    <h3>Name Your Application</h3>
+                    <p>In the dialog box, enter a name for your application. This name will appear in your Rich Presence status.</p>
+                    <p><strong><i class="fas fa-lightbulb"></i> Tip:</strong> Choose a descriptive name like "My Custom RPC", "Gaming Status", or whatever represents what you'll be displaying.</p>
+                    <p>After entering the name, check the box to agree to Discord's Developer Terms of Service and Developer Policy.</p>
+                    <div class="step-image-placeholder">
+                        <img src="images/step3.png" alt="Application Name Dialog">
+                        <p class="image-caption">Enter your application name</p>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">Step 4</div>
+                    <h3>Create the Application</h3>
+                    <p>Click the <strong>"Create"</strong> button to create your new Discord application.</p>
+                    <p>You'll be redirected to your application's dashboard page.</p>
+                    <div class="step-image-placeholder">
+                        <img src="images/step4.png" alt="Create Button">
+                        <p class="image-caption">Click the Create button</p>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">Step 5</div>
+                    <h3>Locate Your Application ID</h3>
+                    <p>On your application's dashboard, you'll see the <strong>Application ID</strong> near the top of the page, under the application name.</p>
+                    <p>The Application ID is a long number (18-19 digits) that uniquely identifies your application.</p>
+                    <div class="step-image-placeholder">
+                        <img src="images/step5.png" alt="Application ID Location">
+                        <p class="image-caption">Your Application ID is displayed here</p>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">Step 6</div>
+                    <h3>Copy Your Application ID</h3>
+                    <p>Click the <strong>"Copy"</strong> button next to the Application ID to copy it to your clipboard.</p>
+                    <p>Alternatively, you can manually select and copy the ID number.</p>
+                    <p><strong><i class="fas fa-exclamation-triangle"></i> Important:</strong> Keep this ID safe! You'll need it to configure BenthonCord.</p>
+                    <div class="step-image-placeholder">
+                        <img src="images/step6.png" alt="Copy Application ID">
+                        <p class="image-caption">Click Copy to copy your Application ID</p>
+                    </div>
+                </div>
+
+                <div class="guide-step optional">
+                    <div class="step-number">Step 7</div>
+                    <h3>Add Rich Presence Assets (Optional)</h3>
+                    <p>If you want to display custom images in your Rich Presence, navigate to the <strong>"Rich Presence"</strong> tab in the left sidebar.</p>
+                    <p>Click on <strong>"Art Assets"</strong> and upload your images. You can add:</p>
+                    <ul>
+                        <li><strong>Large Image:</strong> Main image displayed in your presence (1024x1024px recommended)</li>
+                        <li><strong>Small Image:</strong> Smaller icon overlay (256x256px recommended)</li>
+                    </ul>
+                    <p>Give each uploaded image a unique name (lowercase, no spaces). You'll use these names in BenthonCord to display the images.</p>
+                    <div class="step-image-placeholder">
+                        <img src="images/step7.png" alt="Rich Presence Assets">
+                        <p class="image-caption">Upload custom images for your Rich Presence</p>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">Step 8</div>
+                    <h3>Use Your Application ID in BenthonCord</h3>
+                    <p>Now that you have your Application ID, open BenthonCord and follow these steps:</p>
+                    <ol>
+                        <li>Launch BenthonCord on your computer</li>
+                        <li>Navigate to Settings or Configuration</li>
+                        <li>Paste your Application ID into the designated field</li>
+                        <li>Configure your Rich Presence details (status text, images, etc.)</li>
+                        <li>Click "Apply" or "Start RPC" to activate your custom presence</li>
+                    </ol>
+                    <p>Your custom Rich Presence should now be visible on your Discord profile!</p>
+                    <div class="step-image-placeholder">
+                        <img src="images/step8.png" alt="BenthonCord Configuration">
+                        <p class="image-caption">Enter your Application ID in BenthonCord</p>
+                    </div>
+                </div>
+
+                <div class="guide-troubleshooting">
+                    <h2><i class="fas fa-wrench"></i> Troubleshooting</h2>
+                    <div class="troubleshooting-item">
+                        <h4>My Rich Presence isn't showing up</h4>
+                        <ul>
+                            <li>Make sure Discord is running on your computer</li>
+                            <li>Check that "Display current activity as a status message" is enabled in Discord Settings</li>
+                            <li>Verify your Application ID is correct (18-19 digits, no extra spaces)</li>
+                            <li>Try restarting both Discord and BenthonCord</li>
+                        </ul>
+                    </div>
+                    <div class="troubleshooting-item">
+                        <h4>My custom images aren't displaying</h4>
+                        <ul>
+                            <li>Ensure you've uploaded assets in the Discord Developer Portal</li>
+                            <li>Check that asset names match exactly what you've entered in BenthonCord (case-sensitive)</li>
+                            <li>Wait a few minutes after uploading assets - they may take time to propagate</li>
+                        </ul>
+                    </div>
+                    <div class="troubleshooting-item">
+                        <h4>Error: "Invalid Application ID"</h4>
+                        <ul>
+                            <li>Double-check you copied the entire Application ID</li>
+                            <li>Make sure there are no extra spaces before or after the ID</li>
+                            <li>Verify the application still exists in your Developer Portal</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-footer">
+                    <h2><i class="fas fa-check-circle"></i> You're All Set!</h2>
+                    <p>Congratulations! You now have your Discord Application ID and know how to use it with BenthonCord. Enjoy customizing your Rich Presence!</p>
+                    <div class="guide-buttons">
+                        <a href="faq.html" class="btn btn-secondary">Back to FAQ</a>
+                        <a href="download.html" class="btn btn-primary">Download BenthonCord</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BenthonCord. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="download.html">Download</a>
+                <a href="https://projects.exolyte.pl" target="_blank">Our Projects</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
